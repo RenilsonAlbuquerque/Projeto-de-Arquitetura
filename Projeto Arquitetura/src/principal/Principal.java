@@ -9,6 +9,7 @@ public class Principal {
 
 	private static ArrayList<String> instrucoes = new  ArrayList<String>();
 	
+	
 	public static void main(String args[]){
 		
 		System.out.println(toBin("02114020"));
