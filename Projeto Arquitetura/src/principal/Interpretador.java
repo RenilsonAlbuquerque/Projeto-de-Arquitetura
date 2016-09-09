@@ -4,14 +4,19 @@ import java.util.ArrayList;
 
 public class Interpretador {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 	public Interpretador() {
 
 	}
+	
+	public String toDecimal(String nom){
+				
+		String data = Integer.toString(Integer.parseInt(nom, 2), 10);		
+		
+		return data;
+		
+	}
+	
+	
 
 	public String toBin(String parametro) {
 
@@ -28,254 +33,258 @@ public class Interpretador {
 		return resultado;
 
 	}
+	
+	
 
-	public String teste(String result){
-		
-		//---------- separação do opCode ---------//
-		
+	public String translateAssembly(String result) {
+
+		// ---------- separação do opCode ---------//
+
 		String opCode = result.substring(0, 6);
-		
-		//----------------------------------------//
-		
-		
-		//-------- estruturação do tipo r -------//
-		
-		String rs,rt,rd,sh,fn; 
-		
-		//---------------------------------------//
-		
-		//-------- estruturação do tipo j -------//
-		
-		String operand; 
-				
-		//---------------------------------------//
-				
-		//-------- estruturação do tipo j -------//
-		
-		String jumpAdrres; 
-						
-		//---------------------------------------//
-		
-		switch(result){
 
-		case"000000":
-			
-			//ADD ADDU AND ADD ADDU AND DIV DIVU JR MFHI MFLO MULT
-			//MULTU NOR	OR SLL SLLV	SLT	SRA	SRAV SRL SRLV SUB SUBU
-			//SYSCALL XOR
-			
-			
-			String funcao = result.substring(26, 32);
-			
-			switch(funcao){	
-			
+		// ----------------------------------------//
+
+		// -------- estruturação do tipo r -------//
+
+		String rs, rt, rd, sh, fn;
+
+		// ---------------------------------------//
+
+		// -------- estruturação do tipo j -------//
+
+		String operand;
+
+		// ---------------------------------------//
+
+		// -------- estruturação do tipo j -------//
+
+		String jumpAdrres;
+
+		// ---------------------------------------//
+
+		switch (result) {
+
+		case "000000":
+
+			// ADD ADDU AND ADD ADDU AND DIV DIVU JR MFHI MFLO MULT
+			// MULTU NOR OR SLL SLLV SLT SRA SRAV SRL SRLV SUB SUBU
+			// SYSCALL XOR
+
+			fn = result.substring(26, 32);
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			rd = result.substring(16, 21);
+			sh = result.substring(21, 26);
+
+			switch (fn) {
+
 			case "100000":
-				//ADD
+				// ADD
 				
+				
+
 				break;
-				
+
 			case "100001":
-				//ADDU
-				
+				// ADDU
+
 				break;
-				
+
 			case "100100":
-				//AND
-								
+				// AND
+
 				break;
-				
+
 			case "001000":
-				//JR
-				
+				// JR
+
 				break;
-				
+
 			case "010000":
-				//MFHI
+				// MFHI
 				break;
-				
+
 			case "010010":
-				//MFLO
+				// MFLO
 				break;
-				
+
 			case "011000":
-				//MULT
+				// MULT
 				break;
-				
+
 			case "011001":
-				//MULTU
+				// MULTU
 				break;
-			
+
 			case "100111":
-				//NOR
+				// NOR
 				break;
-				
+
 			case "100101":
-				//OR
+				// OR
 				break;
-				
+
 			case "000000":
-				//SLL
+				// SLL
 				break;
-				
+
 			case "000100":
-				//SLLV
+				// SLLV
 				break;
-			
+
 			case "101010":
-				//SLT
+				// SLT
 				break;
-				
+
 			case "000011":
-				//SRA
+				// SRA
 				break;
-				
+
 			case "000111":
-				//SRAV
+				// SRAV
 				break;
-				
+
 			case "000010":
-				//SRL
+				// SRL
 				break;
 			case "000110":
-				//SRLV
+				// SRLV
 				break;
-				
+
 			case "100010":
-				//SUB
+				// SUB
 				break;
-				
+
 			case "100011":
-				//SUBU
+				// SUBU
 				break;
-				
+
 			case "001100":
-				//SYSCALL
+				// SYSCALL
 				break;
-				
+
 			case "100110":
-				//XOR
+				// XOR
 				break;
-				
+
 			case "011011":
-				//DIVU
+				// DIVU
 				break;
-				
+
 			case "011010":
-				//DIV
+				// DIV
 				break;
-					
-				
+
 			}
-			
-			
-			break;	
-			
-		case"000001":
-			
-			//BLTZ
-		
+
 			break;
-		
-		case"000010":
-			
-			//J
-			
+
+		case "000001":
+
+			// BLTZ
+
 			break;
-		
-		case"000011":
-			
-			//JAL
-			
+
+		case "000010":
+
+			// J
+
 			break;
-		
-		case"000100":
-			
-			//BEQ
-			
+
+		case "000011":
+
+			// JAL
+
 			break;
-			
-		case"000101":
-			
-			//BNE
-			
+
+		case "000100":
+
+			// BEQ
+
 			break;
-			
-		case"001000":
-			
-			//ADDI
-			
+
+		case "000101":
+
+			// BNE
+
 			break;
-			
-		case"001001":
-			
-			//ADDIU
-			
+
+		case "001000":
+
+			// ADDI
+
 			break;
-			
-		case"001010":
-			
-			//SLTI
-			
+
+		case "001001":
+
+			// ADDIU
+
 			break;
-		
-		case"001100":
-			
-			//ANDI
-			
+
+		case "001010":
+
+			// SLTI
+
 			break;
-			
-		case"001101":
-			
-			//ORI
-			
+
+		case "001100":
+
+			// ANDI
+
 			break;
-		
-		case"001110":
-			
-			//XORI
-			
-			break;	
-		
-		case"001111":
-			
-			//LUI
-			
+
+		case "001101":
+
+			// ORI
+
 			break;
-			
-		case"100000":
-			
-			//LB
-	
+
+		case "001110":
+
+			// XORI
+
 			break;
-		
-		case"100011":
-			
-			//LW
-	
+
+		case "001111":
+
+			// LUI
+
 			break;
-		
-		case"100010":
-			
-			//LBU
-	
+
+		case "100000":
+
+			// LB
+
 			break;
-		
-		case"101000":
-			
-			//SB
-	
+
+		case "100011":
+
+			// LW
+
 			break;
-			
-		case"101011":
-			
-			//SW
-	
+
+		case "100010":
+
+			// LBU
+
 			break;
-			
+
+		case "101000":
+
+			// SB
+
+			break;
+
+		case "101011":
+
+			// SW
+
+			break;
+
 		}
-		
-		return opCode;
-		
+
+		return null;
+
 	}
 
 }
