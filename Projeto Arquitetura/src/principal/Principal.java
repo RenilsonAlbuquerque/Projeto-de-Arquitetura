@@ -6,31 +6,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Principal {
+	
+	private static Interpretador interpretador = new Interpretador();
 
 	private static ArrayList<String> instrucoes = new  ArrayList<String>();
 	
 	
 	public static void main(String args[]){
 		
-		System.out.println(toBin("02114020"));
+		System.out.println(interpretador.toBin("02114020"));
 	}
 	
-	public static String toBin(String parametro){
-		
-		String resultado = Integer.toString(Integer.parseInt(parametro.toUpperCase(), 16), 2);
-		System.out.println(resultado.length());
-		
-		if(resultado.length() < 32)
-		{
-			while(resultado.length() < 32){
-				resultado = "0" + resultado;
-			}
-		}
-		System.out.println(resultado.length());
-		
-		return resultado;
 	
-	}
 	
 	private static void lerArquivo(){
 		
