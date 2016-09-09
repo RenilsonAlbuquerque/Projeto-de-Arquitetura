@@ -14,7 +14,12 @@ public class Principal {
 	
 	public static void main(String args[]){
 		
-		System.out.println(interpretador.toBin("02114020"));
+		String a = interpretador.toBin("02114020");
+		
+		System.out.println(a);
+		
+		
+		
 	}
 	
 	
