@@ -345,6 +345,7 @@ public class Interpretador {
 			imm= result.substring(16,32);
 			System.out.println("Sw  $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)) + "($" +toDecimal(rs) +")");
 
+			
 
 			break;
 
