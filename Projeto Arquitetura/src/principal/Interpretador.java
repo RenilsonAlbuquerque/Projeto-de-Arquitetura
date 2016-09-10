@@ -227,72 +227,124 @@ public class Interpretador {
 		case "001000":
 
 			// ADDI
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			imm= result.substring(16,32);
+			System.out.println("Addi " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
 
 			break;
 
 		case "001001":
 
 			// ADDIU
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			imm= result.substring(16,32);
+			System.out.println("Addiu " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
 
 			break;
 
 		case "001010":
 
 			// SLTI
+			
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			imm= result.substring(16,32);
+			System.out.println("Slti " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
 
 			break;
 
 		case "001100":
 
 			// ANDI
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			imm= result.substring(16,32);
+			System.out.println("Andi " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
 
 			break;
 
 		case "001101":
 
 			// ORI
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			imm= result.substring(16,32);
+			System.out.println("Ori " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
 
 			break;
 
 		case "001110":
 
 			// XORI
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			imm= result.substring(16,32);
+			System.out.println("Xori " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
 
 			break;
 
 		case "001111":
 
 			// LUI
+			rs = result.substring(6, 11);
+			rt = "0";
+			imm= result.substring(16,32);
+			System.out.println("Lui " + "$" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
 
 			break;
 
 		case "100000":
 
 			// LB
+			//o rs representa uma base não um registrador, mas de qualquer forma será um numero em decimal
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			imm= result.substring(16,32);
+			System.out.println("Lb " + "$" + toDecimal(rs) + "," + toDecimal(rt) + "," + toDecimal(result.substring(16,32)) + "($"+ toDecimal(rs)+ ")");
 
 			break;
 
 		case "100011":
 
 			// LW
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			imm= result.substring(16,32);
+			System.out.println("Lw  $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)) + "($" +toDecimal(rs) +")");
 
 			break;
 
 		case "100010":
 
 			// LBU
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			imm= result.substring(16,32);
+			System.out.println("lbu  $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)) + "($" +toDecimal(rs) +")");
 
 			break;
 
 		case "101000":
 
 			// SB
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			imm= result.substring(16,32);
+			System.out.println("Sb  $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)) + "($" +toDecimal(rs) +")");
+
 
 			break;
 
 		case "101011":
 
 			// SW
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			imm= result.substring(16,32);
+			System.out.println("Sw  $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)) + "($" +toDecimal(rs) +")");
+
 
 			break;
 
