@@ -199,22 +199,38 @@ public class Interpretador {
 		case "000001":
 			// BLTZ
 			
+			rs = result.substring(6, 11);
+			imm= result.substring(16,32);
+			System.out.println("Beq " + "$" + toDecimal(rs) + "," + toDecimal(imm));
+			
 			break;
 
 		case "000010":
 			// J
+			
+			imm= result.substring(6,32);
+			System.out.println("J " + "$" + toDecimal(imm));
+
 
 			break;
 
 		case "000011":
 
 			// JAL
+			
+			imm= result.substring(6,32);
+			System.out.println("Jal " + "$" + toDecimal(imm));
 
 			break;
 
 		case "000100":
 
 			// BEQ
+			
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			imm= result.substring(16,32);
+			System.out.println("Beq " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(imm));
 
 			break;
 
