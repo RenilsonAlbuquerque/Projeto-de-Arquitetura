@@ -17,7 +17,7 @@ public class Interpretador {
 	
 
 	public String toBin(String parametro) {
-
+		
 		String resultado = Integer.toString(Integer.parseInt(parametro.toUpperCase(), 16), 2);
 		System.out.println(resultado.length());
 
@@ -78,19 +78,19 @@ public class Interpretador {
 
 			case "100000":
 				// ADD
-				System.out.println("Add " +"$"+toDecimal(rd)+ "$" +toDecimal(rs)+"$"+ toDecimal(rt) );
+				System.out.println("Add " +"$"+toDecimal(rd)+ ", $" +toDecimal(rs)+", $"+ toDecimal(rt) );
 
 				break;
 
 			case "100001":
 				// ADDU
-				System.out.println("Addu " +"$"+toDecimal(rd)+ "$" +toDecimal(rs)+"$"+ toDecimal(rt) );
+				System.out.println("Addu " +"$"+toDecimal(rd)+ ", $" +toDecimal(rs)+", $"+ toDecimal(rt) );
 
 				break;
 
 			case "100100":
 				// AND
-				System.out.println("And " +"$"+toDecimal(rd)+ "$" +toDecimal(rs)+"$"+ toDecimal(rt) );
+				System.out.println("And " +"$"+toDecimal(rd)+ ", $" +toDecimal(rs)+", $"+ toDecimal(rt) );
 				break;
 
 			case "001000":
@@ -110,66 +110,66 @@ public class Interpretador {
 
 			case "011000":
 				// MULT
-				System.out.println("Mult " +"$"+toDecimal(rs)+ "$" +toDecimal(rt));
+				System.out.println("Mult " +"$"+toDecimal(rs)+ ", $" +toDecimal(rt));
 				break;
 
 			case "011001":
 				// MULTU
-				System.out.println("Multu " +"$"+toDecimal(rs)+ " $"+ toDecimal(rt) );
+				System.out.println("Multu " +"$"+toDecimal(rs)+ ", $"+ toDecimal(rt) );
 				break;
 
 			case "100111":
 				// NOR
-				System.out.println("Nor " +"$"+toDecimal(rd)+ "$" +toDecimal(rs)+"$"+ toDecimal(rt) );
+				System.out.println("Nor " +"$"+toDecimal(rd)+ ", $" +toDecimal(rs)+", $"+ toDecimal(rt) );
 				break;
 
 			case "100101":
 				// OR
-				System.out.println("Or " +"$"+toDecimal(rd)+ "$" +toDecimal(rs)+"$"+ toDecimal(rt) );
+				System.out.println("Or " +"$"+toDecimal(rd)+ ", $" +toDecimal(rs)+", $"+ toDecimal(rt) );
 				break;
 
 			case "000000":
 				// SLL
-				System.out.println("Sll " +"$"+toDecimal(rd)+ "$" +toDecimal(rt)+"$"+ toDecimal(sh) );
+				System.out.println("Sll " +"$"+toDecimal(rd)+ ", $" +toDecimal(rt)+", $"+ toDecimal(sh) );
 				break;
 
 			case "000100":
 				// SLLV
-				System.out.println("Sllv " +"$"+toDecimal(rd)+ "$" +toDecimal(rt)+"$"+ toDecimal(rs) );
+				System.out.println("Sllv " +"$"+toDecimal(rd)+ ", $" +toDecimal(rt)+", $"+ toDecimal(rs) );
 				break;
 
 			case "101010":
 				// SLT
-				System.out.println("Slt " +"$"+toDecimal(rd)+ "$" +toDecimal(rs)+"$"+ toDecimal(rt) );
+				System.out.println("Slt " +"$"+toDecimal(rd)+ ", $" +toDecimal(rs)+", $"+ toDecimal(rt) );
 				break;
 
 			case "000011":
 				// SRA
-				System.out.println("Sra " +"$"+toDecimal(rd)+ "$" +toDecimal(rt)+"$"+ toDecimal(sh) );
+				System.out.println("Sra " +"$"+toDecimal(rd)+ ", $" +toDecimal(rt)+", $"+ toDecimal(sh) );
 				break;
 
 			case "000111":
 				// SRAV
-				System.out.println("Srav " +"$"+toDecimal(rd)+ "$" +toDecimal(rt)+"$"+ toDecimal(rs) );
+				System.out.println("Srav " +"$"+toDecimal(rd)+ ", $" +toDecimal(rt)+", $"+ toDecimal(rs) );
 				break;
 
 			case "000010":
 				// SRL
-				System.out.println("Srl " +"$"+toDecimal(rd)+ "$" +toDecimal(rt)+"$"+ toDecimal(sh) );
+				System.out.println("Srl " +"$"+toDecimal(rd)+ ", $" +toDecimal(rt)+", $"+ toDecimal(sh) );
 				break;
 			case "000110":
 				// SRLV
-				System.out.println("Srlv " +"$"+toDecimal(rd)+ "$" +toDecimal(rt)+"$"+ toDecimal(rs) );
+				System.out.println("Srlv " +"$"+toDecimal(rd)+ ", $" +toDecimal(rt)+", $"+ toDecimal(rs) );
 				break;
 
 			case "100010":
 				// SUB
-				System.out.println("Sub " +"$"+toDecimal(rd)+ "$" +toDecimal(rs)+"$"+ toDecimal(rt) );
+				System.out.println("Sub " +"$"+toDecimal(rd)+ ", $" +toDecimal(rs)+", $"+ toDecimal(rt) );
 				break;
 
 			case "100011":
 				// SUBU
-				System.out.println("Sub " +"$"+toDecimal(rd)+ "$" +toDecimal(rs)+"$"+ toDecimal(rt) );
+				System.out.println("Sub " +"$"+toDecimal(rd)+ ", $" +toDecimal(rs)+", $"+ toDecimal(rt) );
 				break;
 
 			case "001100":
@@ -179,17 +179,17 @@ public class Interpretador {
 
 			case "100110":
 				// XOR
-				System.out.println("Xor " +"$"+toDecimal(rd)+ "$" +toDecimal(rs)+"$"+ toDecimal(rt) );
+				System.out.println("Xor " +"$"+toDecimal(rd)+ ", $" +toDecimal(rs)+", $"+ toDecimal(rt) );
 				break;
 
 			case "011011":
 				// DIVU
-				System.out.println("Divu "+ "$"+toDecimal(rs)+"$"+ toDecimal(rt) );
+				System.out.println("Divu "+ "$"+toDecimal(rs)+", $"+ toDecimal(rt) );
 				break;
 
 			case "011010":
 				// DIV
-				System.out.println("Div " +"$"+toDecimal(rs)+ "$" +toDecimal(rt) );
+				System.out.println("Div " +"$"+toDecimal(rs)+ ", $" +toDecimal(rt) );
 				break;
 
 			}
@@ -221,6 +221,12 @@ public class Interpretador {
 		case "000101":
 
 			// BNE
+			
+			rs = result.substring(6, 11);
+			rt = result.substring(11, 16);
+			imm= result.substring(16,32);
+			System.out.println("Bne " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(imm));
+
 
 			break;
 
@@ -230,7 +236,7 @@ public class Interpretador {
 			rs = result.substring(6, 11);
 			rt = result.substring(11, 16);
 			imm= result.substring(16,32);
-			System.out.println("Addi " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
+			System.out.println("Addi " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(imm));
 
 			break;
 
@@ -240,7 +246,7 @@ public class Interpretador {
 			rs = result.substring(6, 11);
 			rt = result.substring(11, 16);
 			imm= result.substring(16,32);
-			System.out.println("Addiu " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
+			System.out.println("Addiu " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(imm));
 
 			break;
 
@@ -251,7 +257,7 @@ public class Interpretador {
 			rs = result.substring(6, 11);
 			rt = result.substring(11, 16);
 			imm= result.substring(16,32);
-			System.out.println("Slti " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
+			System.out.println("Slti " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(imm));
 
 			break;
 
@@ -261,7 +267,7 @@ public class Interpretador {
 			rs = result.substring(6, 11);
 			rt = result.substring(11, 16);
 			imm= result.substring(16,32);
-			System.out.println("Andi " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
+			System.out.println("Andi " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(imm));
 
 			break;
 
@@ -271,7 +277,7 @@ public class Interpretador {
 			rs = result.substring(6, 11);
 			rt = result.substring(11, 16);
 			imm= result.substring(16,32);
-			System.out.println("Ori " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
+			System.out.println("Ori " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(imm));
 
 			break;
 
@@ -281,17 +287,17 @@ public class Interpretador {
 			rs = result.substring(6, 11);
 			rt = result.substring(11, 16);
 			imm= result.substring(16,32);
-			System.out.println("Xori " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
+			System.out.println("Xori " + "$" + toDecimal(rs) + ", $" + toDecimal(rt) + "," + toDecimal(imm));
 
 			break;
 
 		case "001111":
 
 			// LUI
-			rs = result.substring(6, 11);
-			rt = "0";
+			
+			rt = result.substring(11, 16);
 			imm= result.substring(16,32);
-			System.out.println("Lui " + "$" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)));
+			System.out.println("Lui " + "$" + toDecimal(rt) + "," + toDecimal(imm));
 
 			break;
 
@@ -302,7 +308,7 @@ public class Interpretador {
 			rs = result.substring(6, 11);
 			rt = result.substring(11, 16);
 			imm= result.substring(16,32);
-			System.out.println("Lb " + "$" + toDecimal(rs) + "," + toDecimal(rt) + "," + toDecimal(result.substring(16,32)) + "($"+ toDecimal(rs)+ ")");
+			System.out.println("Lb " + "$" + toDecimal(rs) + "," + toDecimal(rt) + "," + toDecimal(imm) + "($"+ toDecimal(rs)+ ")");
 
 			break;
 
@@ -312,7 +318,7 @@ public class Interpretador {
 			rs = result.substring(6, 11);
 			rt = result.substring(11, 16);
 			imm= result.substring(16,32);
-			System.out.println("Lw  $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)) + "($" +toDecimal(rs) +")");
+			System.out.println("Lw  $" + toDecimal(rt) + "," + toDecimal(imm) + "($" +toDecimal(rs) +")");
 
 			break;
 
@@ -322,7 +328,7 @@ public class Interpretador {
 			rs = result.substring(6, 11);
 			rt = result.substring(11, 16);
 			imm= result.substring(16,32);
-			System.out.println("lbu  $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)) + "($" +toDecimal(rs) +")");
+			System.out.println("lbu  $" + toDecimal(rt) + "," + toDecimal(imm) + "($" +toDecimal(rs) +")");
 
 			break;
 
@@ -332,7 +338,7 @@ public class Interpretador {
 			rs = result.substring(6, 11);
 			rt = result.substring(11, 16);
 			imm= result.substring(16,32);
-			System.out.println("Sb  $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)) + "($" +toDecimal(rs) +")");
+			System.out.println("Sb  $" + toDecimal(rt) + "," + toDecimal(imm) + "($" +toDecimal(rs) +")");
 
 
 			break;
@@ -343,10 +349,9 @@ public class Interpretador {
 			rs = result.substring(6, 11);
 			rt = result.substring(11, 16);
 			imm= result.substring(16,32);
-			System.out.println("Sw  $" + toDecimal(rt) + "," + toDecimal(result.substring(16,32)) + "($" +toDecimal(rs) +")");
+			System.out.println("Sw  $" + toDecimal(rt) + "," + toDecimal(imm) + "($" +toDecimal(rs) +")");
 
 			
-
 			break;
 
 		}
